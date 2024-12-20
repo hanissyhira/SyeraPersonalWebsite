@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience & Skills</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: url('photo/bg4.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        header {
+            background-color: rgba(255, 228, 240, 0.8); 
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            animation: slideDown 1s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .cute-title {
+            color: #ff6f91;
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.7);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+	.nav-links li a:hover,
+	.nav-links li a.active {
+    	background-color: #ff758c;
+    	color: #fff;
+
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            opacity: 0; 
+            animation: fadeIn 1.5s forwards;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            opacity: 0; 
+            animation: fadeInCard 1.5s ease-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        .card img {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            color: #ee9ca7;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: rgba(255, 214, 232, 0.9);
+            color: #555;
+            font-size: 0.9rem;
+            margin-top: 30px;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInCard {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card:nth-child(1) {
+            animation-delay: 0.5s;
+        }
+
+        .card:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        .card:nth-child(3) {
+            animation-delay: 1.5s;
+        }
+
+        .card:nth-child(4) {
+            animation-delay: 2s;
+        }
+
+
+        @media screen and (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr; 
+            }
+
+            .cute-title {
+                font-size: 2rem;
+            }
+
+   .nav-links {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+
+            .card img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .cute-title {
+                font-size: 1.8rem;
+            }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    
+            }
+
+            .card {
+                padding: 15px;
+            }
+
+            .card h3 {
+                font-size: 1.3rem;
+            }
+
+            .card p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="cute-title">Experience & Skills 💼✨</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="biodata.html">About Me</a></li>
+                    <li><a href="experience.html" class="active">Experience</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="family.html">Family</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-container">
+            <div class="grid-container">
+
+                <div class="card">
+                    <img src="photo/intern.jpg" alt="Internship Icon">
+                    <h3>Internship</h3>
+                    <p>Completed internship at Pejabat Daerah dan Tanah Maran, where I managed land disposal tasks and gained administrative experience.</p>
+                </div>
+
+                <div class="card">
+                    <img src="photo/merdeka.jpg" alt="Volunteer Icon">
+                    <h3>Volunteer Work</h3>
+                    <p>Participated in community events, including organizing the Independence Day celebration in Maran District.</p>
+                </div>
+
+
+                <div class="card">
+                    <img src="photo/technical skills.jpg" alt="Skills Icon">
+                    <h3>Technical Skills</h3>
+                    <p>I have basic knowledge of C++, HTML, and CSS.</p>
+                </div>
+
+                <div class="card">
+                    <img src="photo/soft skills.jpg" alt="Soft Skills Icon">
+                    <h3>Soft Skills</h3>
+                    <p>Strong communication, teamwork, and problem-solving skills honed through various academic and professional experiences.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>All Rights Reserved by Hanis Syahira ❤️.</p>
+    </footer>
+</body>
+</html>
+

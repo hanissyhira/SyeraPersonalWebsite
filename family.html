@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family</title>
+    <style>
+        body {
+
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: url('photo/bg4.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        header {
+    background-color: rgba(255, 228, 240, 0.8);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            animation: slideDown 1s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .cute-title {
+            color: #ff758c;
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.6);
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        }
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    background-color: #ff758c;
+    color: #fff;
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transform: translateY(50px);
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .card:nth-child(1) { animation-delay: 0.2s; }
+        .card:nth-child(2) { animation-delay: 0.4s; }
+        .card:nth-child(3) { animation-delay: 0.6s; }
+        .card:nth-child(4) { animation-delay: 0.8s; }
+        .card:nth-child(5) { animation-delay: 1s; }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card img:hover {
+            transform: scale(1.1);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 10px;
+        }
+
+        .modal .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        .card h3 {
+            font-size: 1.5rem;
+            color: #ff758c;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: rgba(255, 214, 232, 0.9);
+            color: #555;
+            font-size: 0.9rem;
+            margin-top: 30px;
+        }
+
+@media (max-width: 768px) {
+    .cute-title {
+        font-size: 2rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+
+    .grid-container {
+        grid-template-columns: 1fr 1fr; 
+    }
+
+    .card img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cute-title {
+        font-size: 1.5rem;
+    }
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; 
+    }
+
+    .card img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="cute-title">My Family 💕</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="biodata.html">About Me</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="family.html" class="active">Family</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-container">
+            <div class="grid-container">
+                <div class="card">
+                    <img src="photo/abah.jpg" alt="Father" onclick="openModal(this)">
+                    <h3>My Father</h3>
+                    <p>Mohd Zaid bin Ngah</p>
+                </div>
+                <div class="card">
+                    <img src="photo/ibu.jpg" alt="Mother" onclick="openModal(this)">
+                    <h3>My Mother</h3>
+                    <p>Norhayati binti Ishak</p>
+                </div>
+                <div class="card">
+                    <img src="photo/kakak.jpg" alt="Sibling 1" onclick="openModal(this)">
+                    <h3>My Eldest Sister</h3>
+                    <p>Nurhanis Suraya binti Mohd Zaid</p>
+                </div>
+                <div class="card">
+                    <img src="photo/mila.jpg" alt="Sibling 2" onclick="openModal(this)">
+                    <h3>My Younger Sister</h3>
+                    <p>Nur Hanis Syamila binti Mohd Zaid</p>
+                </div>
+                <div class="card">
+                    <img src="photo/adik.jpg" alt="Sibling 3" onclick="openModal(this)">
+                    <h3>My Younger Brother</h3>
+                    <p>Muhammad Zairol Zafuan bin Mohd Zaid</p>
+                </div>
+            </div>
+
+            <div class="modal" id="imageModal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img id="modalImage" alt="Modal Content">
+            </div>
+        </div>
+    </main>
+
+
+    <script>
+        function openModal(image) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            modal.style.display = 'flex';
+            modalImage.src = image.src;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+        }
+    </script>
+
+    <footer>
+        <p>All Rights Reserved by Hanis Syahira ❤️.</p>
+    </footer>
+</body>
